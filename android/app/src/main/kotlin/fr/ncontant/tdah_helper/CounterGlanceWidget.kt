@@ -37,6 +37,7 @@ import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 import es.antonborri.home_widget.HomeWidgetBackgroundIntent
 import es.antonborri.home_widget.actionStartActivity
+import fr.ncontant.tdah_helper.R
 
 class CounterGlanceWidget : GlanceAppWidget() {
 
@@ -111,7 +112,7 @@ class IncrementAction : ActionCallback {
   override suspend fun onAction(context: Context, glanceId: GlanceId, parameters: ActionParameters) {
     val backgroundIntent = HomeWidgetBackgroundIntent.getBroadcast(
         context,
-        Uri.parse("homeWidgetCounter://increment"))
+        Uri.parse("homeWidget://add"))
     backgroundIntent.send()
   }
 }
